@@ -41,13 +41,13 @@ imgJava.append(imagen); //Ponemos la imagen en HTML para que la veoa todos
 const nombre = document.querySelector('#nombre'); //Reconocer datos
 const edad = document.querySelector('#edad'); //Reconocer datos
 const formulario = document.querySelector('#formulario');
-const botonEnviar = document.querySelector('#buttonEnviar');
+//const botonEnviar = document.querySelector('#buttonEnviar');
 
-botonEnviar.addEventListener('click', botonClick);
-//formulario.addEventListener('submit', botonClick);
+//botonEnviar.addEventListener('click', botonClick);
+formulario.addEventListener('submit', botonClick);
 function botonClick(event){ //Se crea una funcion pata hacer el llamado del Button
-    console.log('Escuchando el Boton'); //enencir el fromulario
-    //event.preventDefault(); //Enviar el fromulario sin recargar la pagina
+    console.log('Escuchando el Boton', {event}); //enencir el fromulario
+    event.preventDefault(); //Enviar el fromulario sin recargar la pagina
     nomRes.innerText = nombre.value; //Incerta el texto guardado
     edadRes.innerText = edad.value; //Incertar la edad gaurdada
 }
